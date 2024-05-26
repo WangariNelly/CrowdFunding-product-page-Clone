@@ -1,0 +1,673 @@
+@import url('https://fonts.google.com/specimen/Commissioner');
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+  body{
+    font-size: 16px;
+    font-family: "Commissioner", sans-serif;
+  }
+
+  body.fixed{
+    overflow: hidden;
+  }
+
+  .container{
+       max-width: 1200px;
+       width: 100%;
+       height: fit-content;
+       flex-direction: column;
+       z-index: 1;
+       margin: auto;
+  }
+
+  .container p {
+    color: #777777;
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 400;
+    display: block;
+    line-height: 1.5;
+    width: 100%;
+    padding-left: 1rem;
+  }
+
+  .background-image{
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    z-index: -1;
+  }
+  .background-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+ .menu ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.menu ul li a{
+  color: white;
+}
+
+.menu ul{
+ margin-top: 5rem
+}
+
+.open, .close{
+  display: none;
+}
+hr{
+  display: none;
+}
+.logo{
+ margin-top: 5rem;
+}
+
+.page1{
+     width: 70%;
+     margin: auto;
+     margin-top:15rem;
+     justify-content: center;
+    /* box-shadow: 0 0 1em rgb(0 0 0 / .3); */
+    border-radius: 1rem;
+    font-size: 16px;
+    /* margin-left: 13rem; */
+}
+ 
+.Intro{
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#mastercraft{
+  transform: translateX(-50%);
+  position: relative;
+  top: -30px;
+
+}
+
+.Intro h1{
+  padding-left: 4rem;
+  font-weight: 800;
+  font-size: 40px;
+}
+.Intro p{
+  color: grey;
+ text-align: center;
+}
+
+.Intro .buttondiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: space-between;
+          row-gap: 80rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2em;
+  width: 70%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.Intro .buttondiv button{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 40px;
+}
+  .Intro .buttondiv button{
+  border: none;
+  color: #fff;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.8rem;
+  width: 100%;
+  padding: 0;
+  background-color: #3ab5aa;
+}
+.Intro .buttondiv .button1{
+ height: 4rem;
+ width: 8rem;
+}
+.Intro .button1:hover{
+  cursor: pointer;
+  background-color: hsl(176, 72%, 28%);
+}
+
+.Intro .button2:hover{
+  cursor: pointer;
+  background-color: lightgray
+}
+
+.Intro .buttondiv button span {
+  display: block;
+}
+
+.stats{
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  background-color: white;
+  margin: 2rem 0;
+}
+.backers{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+.backers h2{
+  font-size: 35px;
+}
+.backers p{
+  color: grey;
+  font-size: 16px ;
+}
+
+#griddivs{
+  padding: 2rem;
+}
+.progressbar progress {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd; 
+  border-radius: 10px;
+}
+.progressbar progress::-webkit-progress-bar {
+  background-color: #ddd; 
+  border-radius: 10px; 
+}
+.progressbar progress::-webkit-progress-value {
+  background-color: hsl(176, 72%, 28%);
+  border-radius: 10px; 
+}
+
+.progressbar{
+  padding: 2rem;
+}
+
+.About-project{
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+.About p{
+      color: grey;
+      padding: 1rem;
+      font-size: 16px;
+}
+
+.Bamboo-pledge{
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-top: 2rem;
+}
+
+.Black-edition{
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-top: 2rem;
+}
+
+
+.Mahogany-edition{
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+ background-color: white;
+  margin-top: 2rem;
+  opacity: 50%;
+}
+
+.editions{
+  padding: 2rem;
+}
+
+.editions p{
+  color: grey;
+}
+
+.editions h3{
+  font-size: 25px;
+}
+
+.About-project .heading3{
+  padding: 1rem;
+}
+.About-project span{
+ display: flex;
+ padding: 1rem;
+ justify-content: space-between;
+}
+
+
+.pledge{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 1rem;
+}
+.pledge #pledgespan{
+  color: hsl(176, 50%, 47%);
+  text-align: end;
+}
+.button{
+  padding: 15px 25px;
+  border-radius: 40px;
+  color: white;
+  border: transparent;
+  background-color: hsl(176, 50%, 47%);
+}
+.button:hover{
+cursor: pointer;
+background-color: hsl(176, 72%, 28%);
+}
+.inactive{
+  padding: 15px 25px;
+  border-radius: 40px;
+  color: white;
+  border: transparent;
+  background-color: hsl(0, 0%, 48%);
+}
+
+/*modal selections*/
+.modalHeader{
+  padding: 3rem 1rem 0 1rem;
+}
+
+.modalHeader p{
+  padding: 1rem 1rem 0 0;
+}
+
+.pledge--modal{
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-top: 2rem;
+}
+
+.pledge--modal:hover{
+  cursor:pointer;
+  border: solid 3px hsl(176, 72%, 28%);
+}
+
+.pledge--modal h3:hover{
+  cursor:pointer;
+  color: hsl(176, 72%, 28%);
+}
+
+.pledge--modal p{
+ padding: 1rem;
+ color: grey;
+}
+
+.Bamboo-pledge--modal{
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.Bamboo-pledge--modal:hover{
+  cursor:pointer;
+  border: solid 3px hsl(176, 72%, 28%);
+}
+
+.Bamboo-pledge--modal h3:hover{
+  cursor:pointer;
+  color: hsl(176, 72%, 28%);
+}
+
+label {
+  display: flex;
+  align-items: center; 
+  padding: 0.5em 1em
+}
+
+
+.Bamboo-pledge--modal p{
+  padding: 1rem;
+  color: grey;
+ }
+
+  .pledge-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-wrap: nowrap;
+}
+
+
+.Black-edition--modal{
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.Black-edition--modal:hover{
+  cursor:pointer;
+  border: solid 3px hsl(176, 72%, 28%);
+}
+
+.Black-edition--modal h3:hover{
+  cursor:pointer;
+  color: hsl(176, 72%, 28%);
+}
+
+.Black-edition--modal p{
+  padding: 1rem;
+  color: grey;
+ }
+
+.Mahogany-edition--modal{
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.Mahogany-edition--modal:hover{
+  cursor:pointer;
+  border: solid 3px hsl(176, 72%, 28%);
+}
+.Mahogany-edition--modal h3:hover{
+  cursor:pointer;
+  color: hsl(176, 72%, 28%);
+}
+.Mahogany-edition--modal p{
+  padding: 1rem;
+  color: grey;
+ }
+
+   .modal, .thankyou--modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width:100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); 
+   }
+   .modal-wrapper, .thanksmodal-wrapper{
+    background-color: white;
+    margin: 10% auto;
+    width: 50%;
+    border-radius: 5px;
+   }
+
+   .thanksmodal-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 450px;
+    padding: 10px;
+    margin-top: 10rem;
+   }
+
+
+   .closebtn{
+    float: right;
+    cursor: pointer;
+    padding: 1rem 2rem 0 0;
+   }
+
+
+   .label--modal{
+    margin-top: 2em;
+      display: none;
+   }
+
+   #pledgeAmount{
+    padding: 5px;
+    border-radius: 40px;
+    margin-top: 8px;
+    border: solid 1px #777777;
+    color: darkgray;
+    transition: 0.5s;
+    margin-left: 5rem;
+  }
+   .continueBtn{
+      padding: 12px 18px;
+      margin: 1rem;
+      border-radius: 40px;
+      color: white;
+      border: transparent;
+      background-color: hsl(176, 50%, 47%);
+    }
+    .continueBtn:hover{
+    cursor: pointer;
+    background-color: hsl(176, 72%, 28%);
+    }
+
+   hr{
+    border: 0; 
+    height: 1px; 
+    background-color: #ddd;
+   }
+
+   .btnspan{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   }
+/* mobile devices*/
+@media (max-width: 768px) {
+  .background-image{
+    background-image: url(./images/image-hero-mobile.jpg);
+    height: 250px
+  }
+
+.container {
+  flex-direction: column;
+  margin: auto;
+  position: relative;
+}
+
+ .menu{
+  position: absolute;
+  top: 1rem;
+  right: 0px;
+  background-color: #ffffff;
+  width: 80%;
+  /* margin-top: 0; */
+  margin: 2rem 2rem; 
+  display: none;
+  border-radius: 5px;
+  z-index: 99;
+  height: 13rem;
+  backdrop-filter: blur(50px);
+} 
+.menu ul li{
+  display: block;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.menu ul li a{
+  color: black;
+  padding-left: 7px;
+  font-weight: 400px;
+}
+
+.open, .close{
+  display: block;
+  cursor: pointer;
+}
+.close {
+  position: absolute;
+  display: none;
+  right: 20px;
+}
+
+hr{
+  border: 0; 
+  height: 1px; 
+  background-color: #ddd;
+ }
+
+.logo {
+  margin-top: 0;
+}
+
+.page1 {
+  width: 100%;
+  margin-top: 13rem;
+}
+
+.Intro .buttondiv {
+  flex-direction: row; 
+  align-items: center; 
+  row-gap: 1rem; 
+  width: 80%;
+  padding: 1rem 0;
+}
+
+.Intro .buttondiv button {
+  width: 80%;
+}
+
+.backers {
+  grid-template-columns: 1fr;
+
+}
+
+#griddivs {
+  padding-bottom: 2rem;
+  margin-left: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#griddivs p{
+  padding: 0;
+  margin-top: 1rem;
+}
+.Bamboo-pledge {
+  margin-top: 2rem;
+}
+
+.Black-edition {
+  margin-top: 2rem; 
+}
+
+.Mahogany-edition {
+  margin-top: 2rem; 
+}
+
+.editions {
+  padding: 1rem; 
+}
+.editions {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.editions > div {  
+  flex: 1 0 50%; 
+  margin: 10px; 
+}
+
+/* Targets all inner elements within .editions > div */
+.editions > div > * {
+  flex-direction: column; 
+}
+#pledgespan {
+  padding: 0;
+  margin: 0; 
+}
+.About-project .heading3 {
+  padding: 1rem;
+}
+
+.pledge {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem; 
+}
+
+ .thanksmodal-wrapper {
+    width: 80%; 
+  }
+
+  .label--modal{
+    margin-top: 1em;
+      display: none;
+   }
+
+   #pledgeAmount{
+    padding: 0;
+    border-radius: 40px;
+    margin-top: 4px;
+    border: solid 1px #777777;
+    color: darkgray;
+    transition: 0.5s;
+  }
+  .btnspan{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+
+   label {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: inline-block;
+  }
+  
+  .btnspan input {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+
+}
