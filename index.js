@@ -80,3 +80,19 @@ closeMenu.addEventListener('click', () => {
   menuToggle.style.display = 'block';
   menuHamburger.style.display = 'none';
 });
+
+
+//pledge input
+labelModal.forEach((form) => {
+  form.addEventListener('submit',enterPledge => {
+ console.log('submitted');
+  });
+});
+
+
+
+
+//Functions
+function enterPledge(){
+  
+}
