@@ -20,13 +20,6 @@ openModal.onclick = function () {
   modal.style.display = "block";
   document.body.classList.add("fixed");
 };
-// opens the thankyou note
-for (let button of continueBtn) {
-  button.addEventListener("click", () => {
-    modal.style.display = "none";
-    thankyouModal.style.display = "block";
-  });
-}
 
 closebtn.onclick = function () {
   modal.style.display = "none";
@@ -85,7 +78,7 @@ closeMenu.addEventListener('click', () => {
 //pledge input
 labelModal.forEach((form) => {
   form.addEventListener('submit',enterPledge => {
- console.log('submitted');
+//  console.log('submitted');
   });
 });
 
@@ -93,6 +86,27 @@ labelModal.forEach((form) => {
 
 
 //Functions
-function enterPledge(){
-  
+
+function enterPledge(e){
+  e.preventDefault();
+  // Get all elements with class "pledgeAmount"
+  const inputElements = document.querySelectorAll(".pledgeAmount");
+  // Loop through each element and store its value separately
+  inputElements.forEach((element) => {
+    const value = element.value;
+    const id = new Date().getTime().toString();
+    localStorage.setItem("pledgeAmount" + id , value)
+  });
+  alert("Values successfully stored!");
 }
+
+
+// loads to browser & opens the thankyou note
+window.addEventListener("DOMContentLoaded", () => {
+for (let button of continueBtn) {
+  button.addEventListener("click", enterPledge => {
+    modal.style.display = "none";
+    thankyouModal.style.display = "block";
+  });
+}
+})
