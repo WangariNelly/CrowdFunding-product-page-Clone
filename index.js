@@ -86,6 +86,7 @@ labelModals.forEach((labelModal, index) => {
     event.preventDefault(); 
     const inputElement = labelModal.querySelector(".pledgeAmount");
     const value = parseFloat(inputElement.value); 
+   
 //local storage
     const storedPledges = JSON.parse(localStorage.getItem("pledges") || "[]");
     storedPledges.push(value);
@@ -93,7 +94,17 @@ labelModals.forEach((labelModal, index) => {
     localStorage.setItem("pledges", JSON.stringify(storedPledges));
     console.log(localStorage.getItem("pledges"));
 
+    const totalPledges = document.getElementById('total');
+    let counter = totalPledges.value;
+    counter =+ totalPledges;
+
     modal.style.display = "none";
-   thankyouModal.style.display = "block";
+    thankyouModal.style.display = "block";
   }
 });
+
+// function setBackToDefault(){
+//   inputElement.value =""; // input empty
+//   continueBtn.textContent = "submit";
+//   labelModal.style.display = "none";
+// }
