@@ -75,38 +75,25 @@ closeMenu.addEventListener('click', () => {
 });
 
 
-//pledge input
-labelModal.forEach((form) => {
-  form.addEventListener('submit',enterPledge => {
-//  console.log('submitted');
-  });
-});
+const labelModals = document.querySelectorAll(".label--modal");
+const continueBtns = document.querySelectorAll(".continueBtn");
 
+labelModals.forEach((labelModal, index) => {
+  const continueBtn = continueBtns[index];
 
+  continueBtn.addEventListener("click", enterPledge);
 
+  function enterPledge(event) {
+    event.preventDefault(); 
 
-//Functions
+    const inputElement = labelModal.querySelector(".pledgeAmount");
+    const value = parseFloat(inputElement.value); 
 
-function enterPledge(e){
-  e.preventDefault();
-  // Get all elements with class "pledgeAmount"
-  const inputElements = document.querySelectorAll(".pledgeAmount");
-  // Loop through each element and store its value separately
-  inputElements.forEach((element) => {
-    const value = element.value;
-    const id = new Date().getTime().toString();
-    localStorage.setItem("pledgeAmount" + id , value)
-  });
-  alert("Values successfully stored!");
-}
+    // Store total amount (assuming single pledge per form)
+    localStorage.setItem("pledgeAmount", JSON.stringify(value));
+    console.log(localStorage.getItem("pledgeAmount"));
 
-
-// loads to browser & opens the thankyou note
-window.addEventListener("DOMContentLoaded", () => {
-for (let button of continueBtn) {
-  button.addEventListener("click", enterPledge => {
     modal.style.display = "none";
-    thankyouModal.style.display = "block";
-  });
-}
-})
+   thankyouModal.style.display = "block";
+  }
+});
