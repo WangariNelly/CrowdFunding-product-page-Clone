@@ -80,18 +80,18 @@ const continueBtns = document.querySelectorAll(".continueBtn");
 
 labelModals.forEach((labelModal, index) => {
   const continueBtn = continueBtns[index];
-
   continueBtn.addEventListener("click", enterPledge);
 
   function enterPledge(event) {
     event.preventDefault(); 
-
     const inputElement = labelModal.querySelector(".pledgeAmount");
     const value = parseFloat(inputElement.value); 
-
+//local storage
+    const storedPledges = JSON.parse(localStorage.getItem("pledges") || "[]");
+    storedPledges.push(value);
     // Store total amount (assuming single pledge per form)
-    localStorage.setItem("pledgeAmount", JSON.stringify(value));
-    console.log(localStorage.getItem("pledgeAmount"));
+    localStorage.setItem("pledges", JSON.stringify(storedPledges));
+    console.log(localStorage.getItem("pledges"));
 
     modal.style.display = "none";
    thankyouModal.style.display = "block";
