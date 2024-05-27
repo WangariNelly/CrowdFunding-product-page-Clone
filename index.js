@@ -13,7 +13,8 @@ const menuToggle = document.getElementById("menuToggle");
 const menuHamburger = document.getElementById("menuHamburger");
 const radioButton = document.getElementsByName("inputName");
 const labelModal = document.querySelectorAll(".label--modal");
-
+const totalElement= document.getElementById('total');
+   
 
 //opens the modal
 openModal.onclick = function () {
@@ -78,6 +79,8 @@ closeMenu.addEventListener('click', () => {
 const labelModals = document.querySelectorAll(".label--modal");
 const continueBtns = document.querySelectorAll(".continueBtn");
 
+let totalPledgeAmount = 89,914;  
+
 labelModals.forEach((labelModal, index) => {
   const continueBtn = continueBtns[index];
   continueBtn.addEventListener("click", enterPledge);
@@ -87,16 +90,17 @@ labelModals.forEach((labelModal, index) => {
     const inputElement = labelModal.querySelector(".pledgeAmount");
     const value = parseFloat(inputElement.value); 
    
+    totalPledgeAmount += value;
+
 //local storage
     const storedPledges = JSON.parse(localStorage.getItem("pledges") || "[]");
     storedPledges.push(value);
-    // Store total amount (assuming single pledge per form)
     localStorage.setItem("pledges", JSON.stringify(storedPledges));
+   
+    totalElement.textContent = `$${totalPledgeAmount.toFixed(0)}`; 
     console.log(localStorage.getItem("pledges"));
 
-    const totalPledges = document.getElementById('total');
-    let counter = totalPledges.value;
-    counter =+ totalPledges;
+   
 
     modal.style.display = "none";
     thankyouModal.style.display = "block";
