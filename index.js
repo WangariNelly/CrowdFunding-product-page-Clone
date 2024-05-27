@@ -79,7 +79,7 @@ closeMenu.addEventListener('click', () => {
 const labelModals = document.querySelectorAll(".label--modal");
 const continueBtns = document.querySelectorAll(".continueBtn");
 
-let totalPledgeAmount = 89,914;  
+let totalPledgeAmount = 89914;  
 
 labelModals.forEach((labelModal, index) => {
   const continueBtn = continueBtns[index];
@@ -91,16 +91,15 @@ labelModals.forEach((labelModal, index) => {
     const value = parseFloat(inputElement.value); 
    
     totalPledgeAmount += value;
-
+   
 //local storage
     const storedPledges = JSON.parse(localStorage.getItem("pledges") || "[]");
     storedPledges.push(value);
     localStorage.setItem("pledges", JSON.stringify(storedPledges));
-   
+    localStorage.setItem("totalPledgeAmount", totalPledgeAmount.toFixed(0));
+
     totalElement.textContent = `$${totalPledgeAmount.toFixed(0)}`; 
     console.log(localStorage.getItem("pledges"));
-
-   
 
     modal.style.display = "none";
     thankyouModal.style.display = "block";
