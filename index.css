@@ -436,7 +436,7 @@ background-color: hsl(176, 72%, 28%);
    .modal-wrapper, .thanksmodal-wrapper{
     background-color: white;
     margin: 10% auto;
-    width: 40%; 
+    /* width: 40%;  */
     border: 1px solid #888;
     border-radius: 5px;
     padding: 20px;
@@ -445,6 +445,7 @@ background-color: hsl(176, 72%, 28%);
    .modal-wrapper{
     margin: 15rem auto;
     font-size: 16px;
+    width: 60%;
    }
 
    .modal-wrapper p{
@@ -522,6 +523,7 @@ background-color: hsl(176, 72%, 28%);
    .label{
     display: flex;
     align-items: center;
+    
    }
 
    .pledge-info{
@@ -548,12 +550,10 @@ background-color: hsl(176, 72%, 28%);
 
    .slots-special{
     display: flex;
-    margin-left: 3rem;
    }
 
    .slots--special{
     display: flex;
-    margin-left: 7rem;
    }
 
    .remain-modal span{
