@@ -508,8 +508,9 @@ background-color: hsl(176, 72%, 28%);
 
    .remain-modal{
     display: flex;
-    margin-left: 10px;
+    margin-left: 1rem;
     flex-direction: row;
+    text-wrap: nowrap;
    }
 
   /* .special{
@@ -517,11 +518,7 @@ background-color: hsl(176, 72%, 28%);
       flex-direction: row;
    } */
 
-   .next{
-    display: flex;
-    margin-left: rem;
-   }
-
+  
    .label{
     display: flex;
     align-items: center;
@@ -540,8 +537,24 @@ background-color: hsl(176, 72%, 28%);
 
    .remain-modal h5{
     color: darkcyan;
-     margin-left: 7rem;
+     margin-left: 2rem;
    } 
+
+   .remain-modal .slots{
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+   }
+
+   .slots-special{
+    display: flex;
+    margin-left: 3rem;
+   }
+
+   .slots--special{
+    display: flex;
+    margin-left: 7rem;
+   }
 
    .remain-modal span{
     margin-left: 10px;
