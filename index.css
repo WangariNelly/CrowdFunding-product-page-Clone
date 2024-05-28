@@ -16,7 +16,7 @@
   }
 
   .container{
-       max-width: 1200px;
+       max-width: 1440px;
        width: 100%;
        height: fit-content;
        flex-direction: column;
@@ -58,6 +58,7 @@
  .menu ul li{
   list-style-type: none;
   display: inline-block;
+  margin-left: 1em;
   padding: 1rem;
   font-weight: 700;
   font-size: 16px;
@@ -68,7 +69,7 @@
 }
 
 .menu ul{
- margin-top: 2rem
+ margin-top: 3rem
 }
 
 .open, .close{
@@ -82,10 +83,10 @@ hr{
 }
 
 .page1{
-     width: 70%;
+     width: 60%;
      /* max-width: 750px; */
      margin: auto;
-     margin-top:15rem;
+     margin-top: 10rem;
      justify-content: center;
     /* box-shadow: 0 0 1em rgb(0 0 0 / .3); */
     border-radius: 1rem;
@@ -178,7 +179,7 @@ hr{
 }
 
 .Intro .buttondiv button .button2{
-  background-color: lightgray;
+  background-color: rgb(166,165,165);
 }
 .Intro .button2:hover{
   cursor: pointer;
@@ -362,11 +363,11 @@ background-color: hsl(176, 72%, 28%);
   border: solid 3px hsl(176, 72%, 28%);
 }
 
-.Bamboo-pledge--modal h3{
+.Bamboo-pledge--modal h4{
   color: black;
 }
 
-.Bamboo-pledge--modal h3:hover{
+.Bamboo-pledge--modal h4:hover{
   cursor:pointer;
   color: hsl(176, 72%, 28%);
 }
@@ -382,15 +383,15 @@ background-color: hsl(176, 72%, 28%);
   border-radius: 0.5rem;
   background-color: white;
   margin: 2rem 2rem;
-  padding: 1rem;
-}
+   padding: 1rem;
+} 
 
 .Black-edition--modal:hover{
   cursor:pointer;
   border: solid 3px hsl(176, 72%, 28%);
 }
 
-.Black-edition--modal h3:hover{
+.Black-edition--modal h4:hover{
   cursor:pointer;
   color: hsl(176, 72%, 28%);
 }
@@ -403,15 +404,18 @@ background-color: hsl(176, 72%, 28%);
   box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
   border-radius: 0.5rem;
   background-color: white;
-  margin: 2rem 2rem;
-  padding: 1rem;
+  margin: 2rem 1rem;
+  /* padding: 1rem; */
 }
 
+.remain_modal h4{
+  color: black;
+}
 .Mahogany-edition--modal:hover{
   cursor:pointer;
   border: solid 3px hsl(176, 72%, 28%);
 }
-.Mahogany-edition--modal h3:hover{
+.Mahogany-edition--modal h4:hover{
   cursor:pointer;
   color: hsl(176, 72%, 28%);
 }
@@ -436,16 +440,16 @@ background-color: hsl(176, 72%, 28%);
    .modal-wrapper, .thanksmodal-wrapper{
     background-color: white;
     margin: 10% auto;
-    /* width: 40%;  */
+    width: 40%; 
     border: 1px solid #888;
     border-radius: 5px;
     padding: 20px;
    }
 
    .modal-wrapper{
-    margin: 15rem auto;
+    margin:  15em auto;
     font-size: 16px;
-    width: 40%;
+    width: 50%;
    }
 
    .modal-wrapper p{
@@ -479,13 +483,13 @@ background-color: hsl(176, 72%, 28%);
    }
 
    #pledgeAmount{
-    padding: 12px 18px;
+    padding: 0.75em 1em;
+    width: 10em;
     border-radius: 40px;
-    margin: 1rem;
     border: solid 1px #777777;
     color: lightgray;
-    transition: 0.5s;
-    margin-left: 6rem;
+    margin-left: 0 0.5em;
+    font: 1rem;
   }
    .continueBtn{
       padding: 12px 18px;
@@ -501,10 +505,9 @@ background-color: hsl(176, 72%, 28%);
     }
 
    .btnspan{
-    margin-top: 2em;
     display: flex;
-    flex-direction: row;
-    justify-content: start; 
+    justify-content: space-between;
+    align-items: center;
    }  
 
    .remain-modal{
@@ -532,13 +535,13 @@ background-color: hsl(176, 72%, 28%);
   }
   
     .remain-modal h4{
-    color: darkcyan;
-     margin-left:3rem;
+    /* color: darkcyan; */
+     margin-left: 10px;
    } 
 
    .remain-modal h5{
     color: darkcyan;
-     margin-left: 2rem;
+     margin-left: 10px;
    } 
 
    .remain-modal .slots{
@@ -549,11 +552,11 @@ background-color: hsl(176, 72%, 28%);
 
    .remainModal{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
    }
 
    .remainModal span{
-   margin-left: 0.2rem;
+   margin-left: 10px;
    }
 
 

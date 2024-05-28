@@ -78,7 +78,7 @@ const labelModals = document.querySelectorAll(".label--modal");
 const continueBtns = document.querySelectorAll(".continueBtn");
 
 let targetAmount = 100000;
-let totalPledgeAmount = 0;
+let totalPledgeAmount = 89914;
 let backers = 5007;
 let initialSlots = parseInt(availableSlots.textContent);
 
@@ -132,7 +132,7 @@ labelModals.forEach((labelModal, index) => {
     availableSlots.textContent = `$${initialSlots.toFixed(0)}`;
     // if (initialSlots <= 0) {
     //   labelModal.classList.add("inactive");
-    updateProgressBar();
+    // updateProgressBar();
     modal.style.display = "none";
     thankyouModal.style.display = "block";
   }
