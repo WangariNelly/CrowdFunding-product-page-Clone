@@ -82,7 +82,7 @@ hr{
 }
 
 .page1{
-     width: 60%;
+     width: 70%;
      /* max-width: 750px; */
      margin: auto;
      margin-top:15rem;
@@ -445,7 +445,7 @@ background-color: hsl(176, 72%, 28%);
    .modal-wrapper{
     margin: 15rem auto;
     font-size: 16px;
-    width: 60%;
+    width: 40%;
    }
 
    .modal-wrapper p{
