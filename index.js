@@ -16,7 +16,7 @@ const labelModal = document.querySelectorAll(".label--modal");
 const totalElement = document.getElementById("total");
 const totalBackers = document.getElementById("backers");
 const availableSlots = document.querySelectorAll(".slots");
-const progressBar = document.querySelector(".progressbar .file");
+// const progressBar = document.querySelector(".progressbar .file");
 
 //opens the modal
 openModal.onclick = function () {
@@ -78,16 +78,16 @@ const labelModals = document.querySelectorAll(".label--modal");
 const continueBtns = document.querySelectorAll(".continueBtn");
 
 let targetAmount = 100000;
-let totalPledgeAmount = 89914;
+let totalPledgeAmount = 0;
 let backers = 5007;
-let initialSlots = availableSlots.textContent;
+let initialSlots = parseInt(availableSlots.textContent);
 
-function updateProgressBar() {
-  const progressPercentage = Math.min((totalPledgeAmount / targetAmount) * 100, 100);
-  progressBar.textContent = `${progressPercentage.toFixed(1)}%`;
-}
-
-updateProgressBar();
+// function updateProgressBar() {
+//   // const progressPercentage = Math.min((totalPledgeAmount / targetAmount) * 100, 100);
+//   const progressPercentage = (totalPledgeAmount / targetAmount) * 100;
+//   progressBar.textContent = `${progressPercentage.toFixed(0)}%`;
+// }
+// updateProgressBar();
 
 
 labelModals.forEach((labelModal, index) => {
@@ -98,14 +98,14 @@ labelModals.forEach((labelModal, index) => {
     event.preventDefault();
     const inputElement = labelModal.querySelector(".pledgeAmount");
     const value = parseFloat(inputElement.value);
+    //total pledge
+    totalPledgeAmount += value;
+
     //local storage
     const storedPledges = JSON.parse(localStorage.getItem("pledges") || "[]");
     storedPledges.push(value);
     localStorage.setItem("pledges", JSON.stringify(storedPledges));
-    console.log(localStorage.getItem("pledges"));
-
-    //total pledge
-    totalPledgeAmount += value;
+    // console.log(localStorage.getItem("pledges"));
 
     //stores Total pledged
     const storedTotal = JSON.parse(
@@ -132,7 +132,7 @@ labelModals.forEach((labelModal, index) => {
     availableSlots.textContent = `$${initialSlots.toFixed(0)}`;
     // if (initialSlots <= 0) {
     //   labelModal.classList.add("inactive");
-
+    updateProgressBar();
     modal.style.display = "none";
     thankyouModal.style.display = "block";
   }
