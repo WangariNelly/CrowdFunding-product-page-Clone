@@ -549,6 +549,15 @@ background-color: hsl(176, 72%, 28%);
    }
 
 
+   hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;               
+    background-color: lightgray;
+    height: 1px;
+  }
+
 /* mobile devices*/
 @media(max-width: 768px) {
   .background-image{
