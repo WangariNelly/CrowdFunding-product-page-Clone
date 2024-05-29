@@ -1,5 +1,7 @@
 # Frontend Mentor - Crowdfunding product page
 
+- This code provides interactivity for the crowdfunding project webpage. It handles modal opening/closing, radio button selection,  -  pledge submission, progress bar updates, local storage of data, and displays a countdown timer.
+
 ![Design preview for the Crowdfunding product page coding challenge](./design/desktop-preview.jpg)
 
 

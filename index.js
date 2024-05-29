@@ -86,7 +86,8 @@ let initialSlots = parseInt(availableSlots.textContent);
 
 function updateProgressBar() {
   const progressPercentage = (totalPledgeAmount / targetAmount) * 100;
-  progressBar.style.width = `${progressPercentage}%`;
+  const progressBar = document.getElementById("file");
+  progressBar.value = progressPercentage;
   progressBar.style.setProperty("-webkit-appearance", "none");
   progressBar.style.backgroundColor = "lightblue";
 }
@@ -128,8 +129,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
         localStorage.getItem("totalPledgeAmount") || "[]"
       );
       storedPledges.push(storedTotal);
-      localStorage.setItem("totalPledgeAmount",
-      JSON.stringify(totalPledgeAmount.toFixed(0))
+      localStorage.setItem(
+        "totalPledgeAmount",
+        JSON.stringify(totalPledgeAmount.toFixed(0))
       );
       totalElement.textContent = `$${totalPledgeAmount.toFixed(0)}`;
 
@@ -145,21 +147,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
         "slotsAvailable",
         JSON.stringify(initialSlots.toFixed(0))
       );
-      availableSlots.textContent = `$${initialSlots.toFixed(0)}`;
-      // if (initialSlots <= 0) {
-      //   labelModal.classList.add("inactive");
-      // updateProgressBar();
+      availableSlots.textContent = `${initialSlots.toFixed(0)}`;
 
       // Reset input field after submission
       let isReset = false;
       if (!isReset) {
-        // Process form submission logic here (optional)
-
-        // Reset input field after submission
         inputData.value = "";
-        isReset = true; // Set flag to prevent further resets
+        isReset = true;
       } else {
-        // Optional: Prevent form submission if already reset
         event.preventDefault();
       }
       modal.style.display = "none";
