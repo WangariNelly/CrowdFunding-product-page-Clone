@@ -55,6 +55,10 @@ body.fixed {
   margin: 0 10px;
 }
 
+.menu{
+  display: inline-block;
+}
+
 .menu ul li {
   list-style-type: none;
   display: inline-block;
@@ -71,8 +75,9 @@ body.fixed {
 .menu ul {
   margin-top: 3rem;
 }
-
-.open,
+.open{
+  display: none;
+}
 .close {
   display: none;
 }
@@ -685,11 +690,15 @@ hr {
 
   #griddivs p {
     padding: 0;
-    margin-top: 1em;
-    /* margin-left: 0.5em; */
+    margin-left: 0.5em;
   }
+
+ #griddivs h2{
+ margin-left: 0.5em;
+}
+
   .Bamboo-pledge {
-    margin-top: 2rem;
+    margin: 0 2em;
   }
 
   .Black-edition {
@@ -791,7 +800,7 @@ hr {
       border: 0;
       clear: both;
       display: block;
-      margin-left: 7em;
+      margin-left: 6em;
       width: 50%;
       background-color: lightgray;
       height: 1px;
