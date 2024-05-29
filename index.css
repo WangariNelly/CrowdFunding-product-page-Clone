@@ -238,6 +238,11 @@ hr {
   font-size: 16px;
 }
 
+
+.backers hr{
+    display: none;
+
+}
 #griddivs {
   padding: 10px;
   margin-left: 10px;
@@ -368,7 +373,7 @@ hr {
   border: solid 3px hsl(176, 72%, 28%);
 }
 
-.pledge--modal h3:hover {
+.pledge--modal h4:hover {
   cursor: pointer;
   color: hsl(176, 72%, 28%);
 }
@@ -431,7 +436,7 @@ hr {
   border-radius: 0.5rem;
   background-color: white;
   margin: 2rem 1rem;
-  /* padding: 1rem; */
+  padding: 1rem;
 }
 
 .remain_modal h4 {
@@ -643,12 +648,6 @@ hr {
     right: 20px;
   }
 
-  hr {
-    border: 0;
-    height: 1px;
-    background-color: #ddd;
-  }
-
   .logo {
     margin-top: 0;
   }
@@ -672,6 +671,9 @@ hr {
 
   .backers {
     grid-template-columns: 1fr;
+    margin-left: 2.5em;
+    justify-content: center;
+    align-items: center;
   }
 
   #griddivs {
@@ -683,7 +685,8 @@ hr {
 
   #griddivs p {
     padding: 0;
-    margin-top: 1rem;
+    margin-top: 1em;
+    margin-left: 0.5em;
   }
   .Bamboo-pledge {
     margin-top: 2rem;
@@ -720,6 +723,10 @@ hr {
     padding: 1rem;
   }
 
+  .modal-wrapper{
+    width: 90%;
+  }
+
   .pledge {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -750,13 +757,91 @@ hr {
   }
 
   label {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+  
+  }
+
+  .remain-modal{
+    display: flex;
+    flex-direction: row;
+    text-wrap: wrap;
+  }
+
+  .remain_modal{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .remainModal{
+    display: none;
+  }
+
+  .remain_modal h5{
+    text-wrap: wrap;
   }
 
   .btnspan input {
     margin-top: 0;
     padding-top: 0;
+  }
+
+  .backers hr{
+    
+      border: 0;
+      clear: both;
+      display: block;
+      margin-left: 4em;
+      width: 50%;
+      background-color: lightgray;
+      height: 1px;
+    
+  }
+  .Intro .buttondiv .button1 {
+    height: 40px;
+    border-radius: 30px;
+    width: 8rem;
+    background-color: #3ab5aa;
+    border: transparent;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    transition: 0.5s;
+  }
+
+  .Intro .button1:hover {
+    cursor: pointer;
+    background-color: hsl(176, 72%, 28%);
+  }
+  
+   .buttondiv button.button2 {
+    background-color: rgb(166, 165, 165);
+    padding: 8px;
+    transition: 0.7s;
+    height: 40px;
+    border-radius: 30px;
+    border: transparent;
+    width: 7rem;
+    color: white;
+  }
+  .Intro .button2:hover {
+    cursor: pointer;
+    background-color: hsl(176, 72%, 28%);
+  }
+  
+  .button2 span{
+    margin-right: 5px;
+  }
+  
+  .button2 img{
+    margin-right: 8px;
+    width: 40px;
+    height: 100%;
+  }
+  .heading3{
+    margin-left: 1em;
+  }
+  .About{
+    margin-left: 1em;
   }
 }

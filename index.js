@@ -115,14 +115,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
       //total pledge
       totalPledgeAmount += value;
 
-      //local storage
+      //local storage  single pledegs
       const storedPledges = JSON.parse(localStorage.getItem("pledges") || "[]");
       storedPledges.push(value);
-      // const totalElement = document.getElementById("total");
+    
       totalElement.textContent = `$${totalPledgeAmount.toFixed(0)}`;
       localStorage.setItem("pledges", JSON.stringify(storedPledges));
       updateProgressBar();
-      // console.log(localStorage.getItem("pledges"));
+    
 
       //stores Total pledged
       const storedTotal = JSON.parse(
