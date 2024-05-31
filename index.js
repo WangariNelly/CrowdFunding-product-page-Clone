@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
       backers++;
       //stores the total backers
       localStorage.setItem("totalBackers", JSON.stringify(backers.toFixed(0)));
-      totalBackers.textContent = `$${backers.toFixed(0)}`;
+      totalBackers.textContent = `${backers.toFixed(0)}`;
 
       // remaining slots
       initialSlots--;
@@ -167,20 +167,11 @@ if (isNaN(value) || value < minPledgeAmount){
   );
   inputElement.value = "";
   return
-}
 
-
-      // Reset input field after submission
-      let isReset = false;
-      if (!isReset) {
-        inputElement.value = "";
-        isReset = true;
-      } else {
-        event.preventDefault();
-      }
       modal.style.display = "none";
       thankyouModal.style.display = "block";
      }
+    }
  });
 });
 

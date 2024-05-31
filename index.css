@@ -57,15 +57,11 @@ body.fixed {
   margin: 0 10px;
 }
 
-/* .menu{
-  display: inline-block;
-} */
-
-.menu ul li {
+.menu ul{
   list-style-type: none;
-  display: inline-block;
-  padding: 10px;
-  margin: 0;
+  padding: 0;
+  margin-top: 3rem;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -74,9 +70,12 @@ body.fixed {
   text-decoration: none;
 }
 
-.menu ul {
-  margin-top: 3rem;
+.menu li {
+  display: inline-block;
+  border: none;
+  padding: 0.5em;
 }
+
 .open{
   display: none;
 }
@@ -92,14 +91,11 @@ hr {
 
 .page1 {
   width: 60%;
-  /* max-width: 750px; */
   margin: auto;
   margin-top: 10rem;
   justify-content: center;
-  /* box-shadow: 0 0 1em rgb(0 0 0 / .3); */
   border-radius: 1rem;
   font-size: 1rem;
-  /* margin-left: 13rem; */
 }
 
 .Intro {
@@ -575,7 +571,6 @@ hr {
 }
 
 .remain-modal h4 {
-  /* color: darkcyan; */
   margin-left: 10px;
 }
 
@@ -624,12 +619,11 @@ hr {
 
   .menu {
     position: absolute;
-    top: 1rem;
+    top: 1em;
     right: 0px;
     background-color: #ffffff;
     width: 80%;
-    /* margin-top: 0; */
-    margin: 2rem 2rem;
+    margin: 1em 2em;
     display: none;
     border-radius: 5px;
     z-index: 99;
@@ -639,7 +633,8 @@ hr {
   .menu ul li {
     display: block;
     padding: 10px;
-    font-size: 24px;
+    font-size: 22px;
+    border-bottom: 1px solid #ddd;
   }
 
   .menu ul li a {
