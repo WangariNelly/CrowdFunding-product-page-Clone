@@ -373,8 +373,9 @@ hr {
   box-shadow: 0 0 0.5em rgb(0 0 0 / 0.3);
   border-radius: 0.5rem;
   background-color: white;
-  margin: 2rem;
-  padding: 1rem;
+  margin: 1em;
+  padding: 1em;
+ 
 }
 
 .pledge--modal:hover {
@@ -395,8 +396,9 @@ hr {
   box-shadow: 0 0 0.5em rgb(0 0 0 / 0.3);
   border-radius: 0.5rem;
   background-color: white;
-  margin: 2rem 2rem;
-  padding: 1rem;
+  margin: 1em;
+  padding: 1em;
+  color: grey;
 }
 
 .Bamboo-pledge--modal:hover {
@@ -413,17 +415,12 @@ hr {
   color: hsl(176, 72%, 28%);
 }
 
-.Bamboo-pledge--modal {
-  /* padding: 1rem;  */
-  color: grey;
-}
-
 .Black-edition--modal {
   box-shadow: 0 0 0.5em rgb(0 0 0 / 0.3);
   border-radius: 0.5rem;
   background-color: white;
-  margin: 2rem 2rem;
-  padding: 1rem;
+  margin: 1em;
+  padding: 1em;
 }
 
 .Black-edition--modal:hover {
@@ -444,17 +441,13 @@ hr {
   box-shadow: 0 0 0.5em rgb(0 0 0 / 0.3);
   border-radius: 0.5rem;
   background-color: white;
-  margin: 2rem 1rem;
-  padding: 1rem;
+  margin: 1em;
+  padding: 1em;
 }
-
-/* .Mahogany-edition--modal .inactive{
-  opacity: 50%;
-} */
-
 
 .remain_modal h4 {
   color: black;
+  font-size: 14px;
 }
 .Mahogany-edition--modal:hover {
   cursor: pointer;
@@ -761,9 +754,11 @@ hr {
   }
 
   #pledgeAmount {
-    padding: 0;
+    width: 50%;
+    height: 4em;
+    padding: 1em;
     border-radius: 40px;
-    margin-top: 4px;
+    margin-top: 7px;
     border: solid 1px #777777;
     color: darkgray;
     transition: 0.5s;
