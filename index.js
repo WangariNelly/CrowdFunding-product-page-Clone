@@ -103,6 +103,7 @@ backers = parseInt(storedBackers);
 totalBackers.textContent = `${backers.toFixed(0)}`;
 
 document.addEventListener("DOMContentLoaded", (e) => {
+  updateProgressBar();
   console.log("PARSED");
   labelModals.forEach((labelModal, index) => {
     const continueBtn = continueBtns[index];
@@ -167,10 +168,11 @@ if (isNaN(value) || value < minPledgeAmount){
   );
   inputElement.value = "";
   return
-
-      modal.style.display = "none";
-      thankyouModal.style.display = "block";
-     }
+  }
+  modal.style.display = "none";
+  thankyouModal.style.display = "block";
+    
+     
     }
  });
 });
