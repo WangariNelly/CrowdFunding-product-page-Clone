@@ -18,7 +18,7 @@ const totalBackers = document.getElementById("backers");
 const availableSlots = document.querySelectorAll(".slots");
 const progressBar = document.querySelector(".progressbar .file");
 const selectReward = document.querySelectorAll(".button");
-const inputData = document.querySelectorAll(".pledgeAmount");
+
 
 //opens the modal
 openModal.onclick = function () {
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     const continueBtn = continueBtns[index];
     continueBtn.addEventListener("click", enterPledge);
 
-    function enterPledge(event) {
+      function enterPledge(event) {
       event.preventDefault();
       const inputElement = labelModal.querySelector(".pledgeAmount");
       const value = parseFloat(inputElement.value);
@@ -149,18 +149,39 @@ document.addEventListener("DOMContentLoaded", (e) => {
       );
       availableSlots.textContent = `${initialSlots.toFixed(0)}`;
 
+        // Minimum input amount
+ const pledgeBox = event.target.closest(".pledge");
+let minPledgeAmount = 1;
+if (pledgeBox.classList.contains("Bamboo-pledge--modal")){
+  minPledgeAmount = 25;
+}else if (pledgeBox.classList.contains("Black-edition--modal")){
+  minPledgeAmount = 75;
+}
+else if (pledgeBox.classList.contains("Mahogany-edition--modal")){
+  minPledgeAmount = 200;
+};
+
+if (isNaN(value) || value < minPledgeAmount){
+  alert(
+    `Please enter a valid pledge amount of at least $${minPledgeAmount}.`
+  );
+  inputElement.value = "";
+  return
+}
+
+
       // Reset input field after submission
       let isReset = false;
       if (!isReset) {
-        inputData.value = "";
+        inputElement.value = "";
         isReset = true;
       } else {
         event.preventDefault();
       }
       modal.style.display = "none";
       thankyouModal.style.display = "block";
-    }
-  });
+     }
+ });
 });
 
 //countdown for days
@@ -186,3 +207,5 @@ function mySelectReward() {
   });
 }
 window.onload = mySelectReward;
+
+
