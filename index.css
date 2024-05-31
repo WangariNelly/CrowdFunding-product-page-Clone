@@ -546,6 +546,8 @@ hr {
 }
 
 .btnspan {
+  display: flex;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -557,8 +559,9 @@ hr {
 }
 
 .remain_modal {
-  margin-left: 0.3em;
+  display: flex;
   flex-direction: row;
+  margin-left: 0.5em;
   text-wrap: nowrap;
 }
 .label {
