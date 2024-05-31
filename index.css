@@ -529,11 +529,12 @@ hr {
   border: solid 1px #777777;
   color: black;
   font-weight: 600;
-  margin: 7px 0.5em;
+  margin-top: 10px;
 }
 .continueBtn {
   padding: 12px 18px;
-  margin: 1rem;
+  margin-left: 2em;
+  margin-top: 1em;
   border-radius: 40px;
   color: white;
   border: transparent;
@@ -545,21 +546,18 @@ hr {
 }
 
 .btnspan {
-  /* display: flex;
-  justify-content: space-between; */
   align-items: center;
 }
 
 .remain-modal {
   display: flex;
-  margin-left: 0.5rem;
+  margin-left: 0.2em;
   flex-direction: row;
   text-wrap: nowrap;
 }
 
 .remain_modal {
-  /* display: flex; */
-  margin-left: 0.5rem;
+  margin-left: 0.3em;
   flex-direction: row;
   text-wrap: nowrap;
 }
