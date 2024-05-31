@@ -755,7 +755,7 @@ hr {
 
   #pledgeAmount {
     width: 50%;
-    height: 4em;
+    height: 3em;
     padding: 1em;
     border-radius: 40px;
     margin-top: 7px;
@@ -764,8 +764,6 @@ hr {
     transition: 0.5s;
   }
   .btnspan {
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
   }
 
