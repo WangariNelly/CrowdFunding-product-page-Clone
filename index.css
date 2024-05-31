@@ -521,12 +521,13 @@ hr {
 
 #pledgeAmount {
   padding: 0.25em 5em;
+  height: 3rem;
   width: 15em;
   border-radius: 40px;
   border: solid 1px #777777;
   color: black;
   font-weight: 600;
-  margin: 0 0.5em;
+  margin: 7px 0.5em;
 }
 .continueBtn {
   padding: 12px 18px;
@@ -542,8 +543,8 @@ hr {
 }
 
 .btnspan {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   align-items: center;
 }
 
