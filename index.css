@@ -54,9 +54,12 @@ body.fixed {
 .header {
   display: flex;
   justify-content: space-between;
-  margin: 0 10px;
+  /* margin: 0 10px; */
 }
 
+.menu{
+  margin-left: 65em;
+}
 .menu ul{
   list-style-type: none;
   padding: 0;
