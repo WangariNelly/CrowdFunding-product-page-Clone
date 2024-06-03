@@ -760,12 +760,14 @@ hr {
     height: 3em;
     padding: 1em;
     border-radius: 40px;
-    margin-top: 7px;
+    margin-top: 12px;
     border: solid 1px #777777;
     color: darkgray;
     transition: 0.5s;
   }
   .btnspan {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
   }
 

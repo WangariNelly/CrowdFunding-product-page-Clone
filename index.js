@@ -171,7 +171,6 @@ if (isNaN(value) || value < minPledgeAmount){
   }
   modal.style.display = "none";
   thankyouModal.style.display = "block";
-    
      
     }
  });
